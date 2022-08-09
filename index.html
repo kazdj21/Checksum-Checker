@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checksum Checker</title>
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="main.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/2022cd01a9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container-fluid" id="main">
+        <nav class="navbar">
+          <div class="container-fluid col-lg-12 col-sm-12" 
+            style="justify-content: center;">
+            <a><h1 id="header" class="navbar-brand">Checksum Checker</h1>
+            </a>
+          </div>
+        </nav>
+        <div id="form" class="container-fluid col-lg-12 col-sm-12" 
+          style="background-color: #C9BBCF; padding-top: 2em; padding-bottom: 2em;">
+          <form action="/" enctype="multipart/form-data" 
+           style="padding: 0;">
+           <div id="message-box">
+            <p id="completionMessage" style="white-space:pre-line;"></p>
+            <div style="display: flex; justify-content: center;">
+                <input type="reset" class="btn btn-primary">
+            </div>
+            
+          </div>
+            <div style="display: flex; justify-content: space-around; 
+              align-items: center;">
+              <div class="form-check">
+                <input type="radio" id="md5" name="algorithm" value="MD5"     
+                 class="form-check-input" checked>
+                <label for="md5" class="form-check-label" style="font-family: 
+                  Inter, sans-serif;">MD5</label>
+              </div>
+              <div class="form-check">
+                <input type="radio" id="sha1" name="algorithm" 
+                 value="SHA1" 
+                  class="form-check-input">
+                <label for="sha1" class="form-check-label" style="font-family: 
+                  Inter, sans-serif;">SHA1</label>
+              </div>          
+            </div>
+            <div style="display: flex; justify-content: space-evenly; align-items: center;">
+              <label class="custom-file-input">
+                <p class="btn btn-outline-primary" id="uploadbtn1">Upload File</p>
+                <input type="file" name="files" id="file1">
+              </label>
+              <label class="custom-file-input">
+                <p class="btn btn-outline-primary" id="uploadbtn2">Upload File</p>
+                <input type="file" name="files" id="file2">
+              </label>         
+            </div>
+            <div style="display: flex; justify-content: center;">
+              <input type="button" class="btn btn-primary" id="submit-btn" value="Submit"> 
+            </div>
+    
+          </form>  
+        </div>
+    
+      </div>
+
+    <footer>
+
+  
+    </footer>
+      <script src="object_hash.js" type="text/javascript"></script>
+      <script src="bootstrap.min.js"></script>
+      <script src="main.js"></script>
+      
+</body>
+</html>
+    

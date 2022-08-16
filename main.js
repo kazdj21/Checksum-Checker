@@ -23,27 +23,28 @@ resetBtn.addEventListener("click", function (e) {
 
 uploadedFile1.addEventListener("input", function (e) {
   
-  document.querySelector("#uploadbtn1").innerHTML = "<i class='fa fa-solid fa-spinner'></i>";
+  document.querySelector("#uploadbtn1").innerHTML = "Uploading";
   fileContents1 = fileReader.readAsBinaryString(uploadedFile1.files[0].slice(0, 10 * 1024 * 1024));
 
   fileReader.onload = function(e) {
     console.log(fileReader.result);
     fileBuffer1 = fileReader.result;
     // uploadedFile1.files[0].name.toString().substring(0,8);
-    document.getElementById("uploadbtn1").innerHTML = "<i class=\"fa fa-solid fa-check\"></i>"
+    document.getElementById("uploadbtn1").innerHTML = "Uploaded"
   }
 
 });
 
 uploadedFile2.addEventListener("input", function (e) {
 
-  document.querySelector("#uploadbtn2").innerHTML = "<i class='fa fa-solid fa-spinner'></i>";
+  document.querySelector("#uploadbtn2").innerHTML = "Uploading";
   fileContents2 = fileReader.readAsBinaryString(uploadedFile2.files[0].slice(0, 10 * 1024 * 1024));
   
   fileReader.onload = function(e) {
     console.log(fileReader.result);
     fileBuffer2 = fileReader.result;
-    document.getElementById("uploadbtn2").innerHTML = "<i class=\"fa fa-solid fa-check\"></i>"
+    document.getElementById("uploadbtn2").innerHTML = "Uploaded"
+
     //document.getElementById("uploadbtn2").innerHTML = uploadedFile2.files[0].name.toString().substring(0,8);
   }
   
